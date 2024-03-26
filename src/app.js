@@ -23,20 +23,36 @@ window.onload = function() {
       ]
     };
 
-    let randomExcuse = [];
+    let randomExcuse1 = [];
+    let randomExcuse2 = [];
+    let randomExcuse3 = [];
+    let randomExcuse4 = [];
 
-    let random = Math.floor(Math.random() * 3 + 1);
+    let randomWho = Math.floor(Math.random() * 3 + 1);
+    let randomAction = Math.floor(Math.random() * 3 + 1);
+    let randomWhat = Math.floor(Math.random() * 3 + 1);
+    let randomWhen = Math.floor(Math.random() * 4 + 1);
 
     for (let i = 0; i < 1; i++) {
-      randomExcuse.push(fullExcuses.who[random]);
-      randomExcuse.push(fullExcuses.action[random]);
-      randomExcuse.push(fullExcuses.what[random]);
-      randomExcuse.push(fullExcuses.when[random]);
+      randomExcuse1.push(fullExcuses.who[randomWho]);
+      randomExcuse2.push(fullExcuses.action[randomAction]);
+      randomExcuse3.push(fullExcuses.what[randomWhat]);
+      randomExcuse4.push(fullExcuses.when[randomWhen]);
     }
 
-    return randomExcuse;
+    return (
+      "OMG ! " +
+      randomExcuse1 +
+      " " +
+      randomExcuse2 +
+      " " +
+      randomExcuse3 +
+      " " +
+      randomExcuse4
+    );
   }
-  console.log(
-    (document.getElementById("excuse").innerHTML = generatorExcuses())
-  );
+
+  let element = (document.getElementById(
+    "excuse"
+  ).innerHTML = generatorExcuses());
 };
