@@ -28,10 +28,10 @@ window.onload = function() {
     let randomExcuse3 = [];
     let randomExcuse4 = [];
 
-    let randomWho = Math.floor(Math.random() * 3 + 1);
-    let randomAction = Math.floor(Math.random() * 3 + 1);
-    let randomWhat = Math.floor(Math.random() * 3 + 1);
-    let randomWhen = Math.floor(Math.random() * 4 + 1);
+    let randomWho = Math.floor(Math.random() * fullExcuses.who.length);
+    let randomAction = Math.floor(Math.random() * fullExcuses.action.length);
+    let randomWhat = Math.floor(Math.random() * fullExcuses.what.length);
+    let randomWhen = Math.floor(Math.random() * fullExcuses.when.length);
 
     for (let i = 0; i < 1; i++) {
       randomExcuse1.push(fullExcuses.who[randomWho]);
